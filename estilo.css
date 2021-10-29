@@ -221,12 +221,12 @@ div.contact{
 	margin-right:10px;
   }
   .full {
-	 display: none; /*esta clase nos permitirá ocultar el menú mediante jQuery*/
+	 display: none;
 	}
 
 	.boxcont {
 		display: grid;
-		grid-template-columns: 1fr .5fr 1fr;
+		grid-template-columns: 1fr;
 	
 		grid-column-gap: 10fr;
 		grid-template-areas: "header"
