@@ -4,6 +4,9 @@ body {
 	margin:0;
 	color: rgb(77, 74, 74);
 }
+p{
+	line-height: 1.5em; 
+}
 /* LINKS */
 a {	color: white; 	text-decoration: none;}
 a:hover {color: #dcb43c;}
@@ -12,7 +15,7 @@ a:active {color: gray;}
 	color: #dcb43c;
 	text-decoration: none;
 	font-weight: 900;
-	font-size: 2vw;
+	font-size: 25px;
 }
 .enlacefoot:hover {color: gray;}
 
@@ -21,27 +24,26 @@ a:active {color: gray;}
 /* TITULOS */
 h1{
 	color: #dcb43c;
-	font-size: 4vw;
+	font-size: 50px;
 	font-weight: 900;
 	text-shadow: 1px 1px hsla(0, 0%, 22%, 0.699);
 }
 h2{
-	color: #dcb43c;
-	font-size: 30px;
+	color: grey;
+	font-size: 20px;
 	font-weight: 900;
-	text-shadow: 1px 1px rgba(128, 128, 128, 0.37);
-
 }
 /* NEGRITA CON COLOR Y SOMBRA */
 b{	color: #dcb43c; text-shadow: 1px 1px black; }
-
+/* IMAGENES */
 img {
 	margin-top: 10px;
 	margin-left: 20px;
   }
 
+/* FORMULARIO */
 input {
-	width: 70%;
+	width: 90%;
 	border-radius: 5px;
 	padding: 12px;
 	background-color: #E7E6E1;
@@ -50,7 +52,7 @@ input {
 
 textarea
 {
-	width: 70%;
+	width: 90%;
 	padding: 12px;
 	border-radius: 5px;
 	background-color: #E7E6E1;
@@ -81,6 +83,9 @@ button {
 	border-radius: 3px;
 }
 
+/* ESTILO DE PAGINAS */
+
+
 .box {
 	display: grid;
 	grid-template-areas: "header"
@@ -97,9 +102,7 @@ button {
 }
 
 header {
-
 	grid-area: header;
-
 	/* background: #5C746B1A; */
 	background: #314E52;
 	position: fixed;
@@ -107,7 +110,6 @@ header {
 	gap: 2em;
 	width:100%;
 }
-
 
 
 .titulo {
@@ -158,12 +160,15 @@ header {
 	grid-area: mapa;
 	margin-top:100px;
 	margin-left: 100px;
-	justify-content:center;
 }
 
 div.contact{
 	margin-bottom:10px;
-
+}
+.itemsprod{
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
 }
 
 
@@ -207,9 +212,60 @@ div.contact{
 	fill: #dcb43c;
 
 }
+.productos {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+.boxprod {
+	display: grid;
+	grid-template-areas: "header"
+						"cont"
+						 "footer";
+}
+
+.imagenresponsive{
+	width:90%;
+	height: auto;
+}
+
+.spaninicio{
+	
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 10px;
+	padding: 10px;
+}
+.span_index{
+	display:inline;
+	margin: auto;
+}
+
+/* RESPONSIVE AJUSTABLE SEGÚN DISPOSITIVO */ 
+
+@media only screen and (max-width: 1280px) {
+	
+  
+	.productos{
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+	}
+
+	.spaninicio{
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+	}
+	
+}
+
 
 @media only screen and (max-width: 768px){
 
+	h1{
+		font-size: 30px;
+	}
   .hamburger {
 	 display: inline-block;
   }
@@ -223,9 +279,19 @@ div.contact{
 
 	.boxcont {
 		display: grid;
+		grid-template-columns: 1fr;
 		grid-template-areas: "header"
 							 "cont"
 							 "mapa"
 							 "footer";
 	}
-  }
+	.productos{
+		display: grid;
+		grid-template-columns: repeat(1, auto);
+	}
+
+	.spaninicio{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
