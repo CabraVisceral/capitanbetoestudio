@@ -90,7 +90,6 @@ button {
 .boxcont {
 	display: grid;
 	grid-template-columns: 1fr .5fr 1fr;
-
 	grid-column-gap: 10fr;
 	grid-template-areas: "header header eader"
 						 "cont mapa mapa"
@@ -226,9 +225,6 @@ div.contact{
 
 	.boxcont {
 		display: grid;
-		grid-template-columns: 1fr;
-	
-		grid-column-gap: 10fr;
 		grid-template-areas: "header"
 							 "cont"
 							 "mapa"
