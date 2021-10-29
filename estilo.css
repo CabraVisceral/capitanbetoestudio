@@ -1,0 +1,236 @@
+*{font-family: 'Montserrat', Arial, Helvetica, sans-serif;}
+
+body {
+	margin:0;
+	color: rgb(77, 74, 74);
+}
+/* LINKS */
+a {	color: white; 	text-decoration: none;}
+a:hover {color: #dcb43c;}
+a:active {color: gray;}
+.enlacefoot{
+	color: #dcb43c;
+	text-decoration: none;
+	font-weight: 900;
+	font-size: 24px;
+}
+.enlacefoot:hover {color: gray;}
+
+.blanco {color: rgb(77, 74, 74); 	text-decoration: none;}
+
+/* TITULOS */
+h1{
+	color: #dcb43c;
+	font-size: 50px;
+	font-weight: 900;
+	text-shadow: 1px 1px hsla(0, 0%, 22%, 0.699);
+}
+h2{
+	color: #dcb43c;
+	font-size: 30px;
+	font-weight: 900;
+	text-shadow: 1px 1px rgba(128, 128, 128, 0.37);
+
+}
+/* NEGRITA CON COLOR Y SOMBRA */
+b{	color: #dcb43c; text-shadow: 1px 1px black; }
+
+img {
+	margin-top: 10px;
+	margin-left: 20px;
+  }
+
+input {
+	width: 70%;
+	border-radius: 5px;
+	padding: 12px;
+	background-color: #E7E6E1;
+	border: none;
+}
+
+textarea
+{
+	width: 70%;
+	padding: 12px;
+	border-radius: 5px;
+	background-color: #E7E6E1;
+	border: none;
+	height: 100px;
+	resize: none;
+
+}
+
+.errorformulario{
+	width:70%;
+	color: red;
+	font-size: 12px;
+	padding:6px;
+}
+.error{
+	color: red;
+}
+button {
+	background-color: #dcb43c;
+	border: none;
+	color: white;
+	padding: 12px 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 550;
+	border-radius: 3px;
+}
+
+.box {
+	display: grid;
+	grid-template-areas: "header"
+						 "cont"
+						 "footer";
+}
+.boxcont {
+	display: grid;
+	grid-template-columns: 1fr .5fr 1fr;
+
+	grid-column-gap: 10fr;
+	grid-template-areas: "header header eader"
+						 "cont mapa mapa"
+						 "footer footer	 footer";
+}
+
+header {
+
+	grid-area: header;
+
+	/* background: #5C746B1A; */
+	background: #314E52;
+	position: fixed;
+	display: flex;
+	gap: 2em;
+	width:100%;
+}
+
+
+
+.titulo {
+	grid-area: titulo;
+	color: #fff;
+	display: flex;
+	align-content:flex-end;
+	width: 100;
+}
+.nav{
+	display: flex;
+	color: #fff;
+	width:90%;
+	font-weight: bold;
+	font-size: 16px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	column-gap: 2em;
+	grid-area: nav;
+}
+.hamburger{
+	display:none;
+}
+
+.contenido{
+	grid-area: cont;
+	margin-top:50px;
+	margin-left: 100px;
+	max-width: 1000px;
+	align-content:center;
+	font-size: 14px;
+	padding: 10;
+}
+.footer{
+	background:  #E7E6E1;
+	grid-area: footer;
+	position: relative;
+    height: 100px;
+	margin-top:90px;
+	padding:20px;
+}
+.footer div{
+	margin-bottom:10px;
+}
+
+.mapa{
+	grid-area: mapa;
+	margin-top:100px;
+	margin-left: 100px;
+	justify-content:center;
+}
+
+div.contact{
+	margin-bottom:10px;
+
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 12px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.social{
+	height: 30px;
+	width: 30px;
+	fill: #dcb43c;
+
+}
+
+@media only screen and (max-width: 768px){
+
+  .hamburger {
+	 display: inline-block;
+  }
+  .nav{
+	justify-content: flex-end;
+	margin-right:10px;
+  }
+  .full {
+	 display: none; /*esta clase nos permitirá ocultar el menú mediante jQuery*/
+	}
+
+	.boxcont {
+		display: grid;
+		grid-template-columns: 1fr .5fr 1fr;
+	
+		grid-column-gap: 10fr;
+		grid-template-areas: "header"
+							 "cont"
+							 "mapa"
+							 "footer";
+	}
+  }
