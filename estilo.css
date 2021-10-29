@@ -12,7 +12,7 @@ a:active {color: gray;}
 	color: #dcb43c;
 	text-decoration: none;
 	font-weight: 900;
-	font-size: 24px;
+	font-size: 4vh;
 }
 .enlacefoot:hover {color: gray;}
 
@@ -148,6 +148,7 @@ header {
 	background:  #E7E6E1;
 	grid-area: footer;
 	position: relative;
+	width:100%;
     height: 100px;
 	margin-top:90px;
 	padding:20px;
